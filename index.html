@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nayeli Preciado | Portafolio Personal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+  <script type="text/javascript" src="https://me.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=xSYknrrF61P4bcPj8rudOCz_Qsy6QwSl6_iJX09L7c61Y-kymYN-cxJtY6Ah14RiZjVvsCu59lym-Sr_yzjY0mmO02_989cMXooGRD1G9Dx2_I53BrBd4GYJOnfqjfIZiliNNDjZOtrgNriPZJDcAf_Q01ZgSGsu10FLzu7c3rOWWctPW0Pt1HLkymqKxmox3OOxvlQmzigar1NAIu-RpgT1j9XTQDvt4kMdYxkyOTpqJPOXvrDUXy7bF9vAXhcy3HnCkehS-Jf9-z23lAugu-TW9ZEvQ1RM-LPUwa8WRATpYFJvzM-9hojpvWJgnoQb" charset="UTF-8"></script><style>
+    :root {
+      --bg: #faf5ff;
+      --text: #2e1065;
+      --text-muted: #6b21a8;
+      --accent: #7c3aed;
+      --accent-hover: #6d28d9;
+      --accent-light: #f3e8ff;
+      --card-bg: #ffffff;
+      --border: #e9d5ff;
+      --tag-bg: #f3e8ff;
+      --tag-text: #6b21a8;
+      --shadow: 0 10px 25px -5px rgba(124, 58, 237, 0.12);
+    }
+
+    [data-theme="dark"] {
+      --bg: #0f081d;
+      --text: #f3e8ff;
+      --text-muted: #c4b5fd;
+      --accent: #a78bfa;
+      --accent-hover: #c4b5fd;
+      --accent-light: #2e1065;
+      --card-bg: #1a0b2e;
+      --border: #3b1a60;
+      --tag-bg: #2e1065;
+      --tag-text: #ddd6fe;
+      --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(250, 245, 255, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      z-index: 100;
+    }
+
+    [data-theme="dark"] header {
+      background: rgba(15, 8, 29, 0.85);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+    }
+
+    /* Logo Estilizado Elegante */
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: var(--text);
+      transition: transform 0.2s;
+    }
+
+    .logo:hover {
+      transform: translateY(-1px);
+    }
+
+    .logo-badge {
+      background: linear-gradient(135deg, var(--accent), #c084fc);
+      color: #ffffff;
+      font-size: 0.85rem;
+      font-weight: 800;
+      padding: 0.3rem 0.6rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(124, 58, 237, 0.3);
+      letter-spacing: 0.5px;
+    }
+
+    .logo-text {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-style: italic;
+      font-size: 1.25rem;
+      background: linear-gradient(135deg, var(--text), var(--accent));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .theme-toggle {
+      background: var(--accent-light);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 0.4rem 0.9rem;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 0.85rem;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+
+    .theme-toggle:hover {
+      transform: scale(1.05);
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 4rem 0 2.5rem;
+    }
+
+    .hero-container {
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+      flex-wrap: wrap-reverse;
+    }
+
+    .hero-text {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .hero h1 {
+      font-size: 2.6rem;
+      font-weight: 800;
+      margin-bottom: 0.4rem;
+      background: linear-gradient(135deg, var(--accent), #d8b4fe);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero .subtitle {
+      font-size: 1.15rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .profile-img-container {
+      flex-shrink: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .profile-pic {
+      width: 170px;
+      height: 170px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--accent);
+      box-shadow: 0 10px 25px rgba(124, 58, 237, 0.25);
+      background-color: var(--card-bg);
+      transition: transform 0.3s ease;
+    }
+
+    .profile-pic:hover {
+      transform: scale(1.03) rotate(2deg);
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.6rem 1.4rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      background-color: var(--accent);
+      color: #ffffff;
+      box-shadow: 0 4px 14px rgba(124, 58, 237, 0.3);
+    }
+
+    [data-theme="dark"] .btn-primary {
+      color: #0f081d;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(124, 58, 237, 0.4);
+    }
+
+    .btn-outline {
+      border: 1px solid var(--border);
+      color: var(--text);
+      background: var(--card-bg);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    /* Sections */
+    section {
+      padding: 3rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    section:last-of-type {
+      border-bottom: none;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 3px;
+      background: var(--accent);
+      margin-top: 0.3rem;
+      border-radius: 2px;
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+    }
+
+    /* Empty state for Projects */
+    .empty-projects {
+      border: 2px dashed var(--border);
+      border-radius: 12px;
+      padding: 3rem 1.5rem;
+      text-align: center;
+      color: var(--text-muted);
+      background: rgba(243, 232, 255, 0.2);
+      font-size: 0.95rem;
+    }
+
+    /* Grid Layout */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent);
+    }
+
+    .card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 0.5rem;
+      color: var(--accent);
+    }
+
+    .card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .tag {
+      background: var(--tag-bg);
+      color: var(--tag-text);
+      font-size: 0.8rem;
+      font-family: 'Fira Code', monospace;
+      padding: 0.3rem 0.7rem;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+
+    /* Interactive Tabs for Gustos */
+    .tab-buttons {
+      display: flex;
+      gap: 0.6rem;
+      overflow-x: auto;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .tab-btn {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 0.5rem 1.2rem;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-weight: 600;
+      white-space: nowrap;
+      transition: all 0.2s;
+    }
+
+    .tab-btn:hover, .tab-btn.active {
+      background: var(--accent);
+      color: #ffffff;
+      border-color: var(--accent);
+      box-shadow: 0 4px 12px rgba(124, 58, 237, 0.3);
+    }
+
+    [data-theme="dark"] .tab-btn:hover, [data-theme="dark"] .tab-btn.active {
+      color: #0f081d;
+    }
+
+    .tab-content {
+      display: none;
+      animation: fadeIn 0.4s ease;
+    }
+
+    .tab-content.active {
+      display: grid;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    footer {
+      padding: 2rem 0;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 640px) {
+      .hero-container { justify-content: center; text-align: center; }
+      .social-links { justify-content: center; }
+      .hero h1 { font-size: 2.1rem; }
+      .nav-links { gap: 0.8rem; font-size: 0.85rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <nav>
+        <a href="#" class="logo">
+          <span class="logo-badge">NP</span>
+          <span class="logo-text">Nayeli Preciado</span>
+        </a>
+        <ul class="nav-links">
+          <li><a href="#about">Sobre mí</a></li>
+          <li><a href="#projects">Proyectos</a></li>
+          <li><a href="#skills">Habilidades</a></li>
+          <li><a href="#gustos">Mis Gustos</a></li>
+          <li><a href="#deportes">Deportes</a></li>
+        </ul>
+        <button class="theme-toggle" id="themeToggle">🌙 Modo</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Hero Section -->
+    <section class="hero" id="about">
+      <div class="hero-container">
+        <div class="hero-text">
+          <h1>Nayeli Preciado</h1>
+          <div class="subtitle">Estudiante de Ingeniería en Sistemas — Escuela Politécnica Nacional</div>
+          <p>
+            Apasionada por el desarrollo de software, la lógica de programación y la resolución de problemas computacionales.
+          </p>
+          <div class="social-links">
+            <a href="https://github.com/nayeli-preciado" target="_blank" class="btn btn-primary">GitHub</a>
+            <a href="mailto:nayeli.preciado@epn.edu.ec" class="btn btn-outline">Contacto</a>
+          </div>
+        </div>
+        <div class="profile-img-container">
+          <!-- Foto de perfil: sube foto.jpg a la raíz de tu repositorio -->
+          <img src="foto.jpg" alt="Foto de Nayeli Preciado" class="profile-pic" onerror="this.onerror=null; this.src='https://ui-avatars.com/api/?name=Nayeli+Preciado&size=170&background=7c3aed&color=fff';">
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section (Apartado Vacío) -->
+    <section id="projects">
+      <h2 class="section-title">Proyectos Destacados</h2>
+      <div class="empty-projects">
+        <p>✨ Próximamente se añadirán nuevos proyectos.</p>
+      </div>
+    </section>
+
+    <!-- Skills Section (Solo Lenguajes y Bases de Datos) -->
+    <section id="skills">
+      <h2 class="section-title">Habilidades Técnicas</h2>
+      
+      <div class="skills-group">
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">C++</span>
+          <span class="tag">SQL / SQLite</span>
+          <span class="tag">HTML5 / CSS3</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Gustos Section -->
+    <section id="gustos">
+      <h2 class="section-title">Mis Gustos & Intereses</h2>
+      
+      <!-- Interactive Filter Tabs -->
+      <div class="tab-buttons">
+        <button class="tab-btn active" onclick="openTab(event, 'musica')">🎵 Música</button>
+        <button class="tab-btn" onclick="openTab(event, 'peliculas')">🎬 Películas</button>
+        <button class="tab-btn" onclick="openTab(event, 'series')">📺 Series & Novelas</button>
+        <button class="tab-btn" onclick="openTab(event, 'libros')">📖 Libros de Romance</button>
+      </div>
+
+      <!-- Tab Content: Música -->
+      <div id="musica" class="tab-content grid active">
+        <div class="card">
+          <h3>🎵 Música Favorita</h3>
+          <p>Me encanta escuchar música para relajarme, estudiar y programar. Disfruto descubrir nuevos géneros, melodías envolventes y canciones con ritmos inspiradores.</p>
+        </div>
+      </div>
+
+      <!-- Tab Content: Películas -->
+      <div id="peliculas" class="tab-content grid">
+        <div class="card">
+          <h3>🎬 Cine & Películas</h3>
+          <p>Disfruto del cine, especialmente historias cautivadoras, drama, comedia romántica y producciones con grandes tramas emocionales y visuales.</p>
+        </div>
+      </div>
+
+      <!-- Tab Content: Series & Novelas -->
+      <div id="series" class="tab-content grid">
+        <div class="card">
+          <h3>📺 Series & Novelas</h3>
+          <p>Fan de maratonear buenas series y novelas. Me fascinan las historias de romance, drama y desarrollo de personajes apasionantes que te atrapan capítulo a capítulo.</p>
+        </div>
+      </div>
+
+      <!-- Tab Content: Libros de Romance -->
+      <div id="libros" class="tab-content grid">
+        <div class="card">
+          <h3>📖 Libros de Romance</h3>
+          <p>Apasionada por la lectura de novelas de romance. Me encanta sumergirme en historias emotivas, giros inesperados y conexiones profundas entre personajes.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sports Section (Nadar y Ciclismo) -->
+    <section id="deportes">
+      <h2 class="section-title">Deportes</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>🏊‍♀️ Natación</h3>
+          <p>Me encanta nadar como disciplina deportiva para liberar el estrés, mantener la energía y conectar con el agua.</p>
+        </div>
+        <div class="card">
+          <h3>🚴‍♀️ Ciclismo</h3>
+          <p>Disfruto del ciclismo y las rutas al aire libre, aprovechando cada recorrido para ejercitarme y disfrutar del entorno.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© Nayeli Preciado — Escuela Politécnica Nacional | Publicado con GitHub Pages</p>
+    </div>
+  </footer>
+
+  <script>
+    // Dark/Light Theme Toggle
+    const themeToggleBtn = document.getElementById('themeToggle');
+    const currentTheme = localStorage.getItem('theme') || 'light';
+
+    if (currentTheme === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      themeToggleBtn.textContent = '☀️ Modo';
+    }
+
+    themeToggleBtn.addEventListener('click', () => {
+      let theme = document.documentElement.getAttribute('data-theme');
+      if (theme === 'dark') {
+        document.documentElement.removeAttribute('data-theme');
+        localStorage.setItem('theme', 'light');
+        themeToggleBtn.textContent = '🌙 Modo';
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+        themeToggleBtn.textContent = '☀️ Modo';
+      }
+    });
+
+    // Interactive Tab Selector
+    function openTab(evt, tabName) {
+      const tabContents = document.getElementsByClassName("tab-content");
+      for (let i = 0; i < tabContents.length; i++) {
+        tabContents[i].classList.remove("active");
+      }
+
+      const tabButtons = document.getElementsByClassName("tab-btn");
+      for (let i = 0; i < tabButtons.length; i++) {
+        tabButtons[i].classList.remove("active");
+      }
+
+      document.getElementById(tabName).classList.add("active");
+      evt.currentTarget.classList.add("active");
+    }
+  </script>
+</body>
+</html>
