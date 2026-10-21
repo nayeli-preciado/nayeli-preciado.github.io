@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nayeli Preciado | Portafolio Académico</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script type="text/javascript" src="https://me.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=fnog1SGZBP9LTmUWbJvfgLs_5EhpY86z67Ub4aPZpG4Jj3CjzezDIODoueltSVTDRQOggKv1cGF7qCwdpSgC1jmmRC4S2kk0gSyt9OSp3y_PxL238uiyrtaISbztseBzKzaKCEWq_PmSp80fM1oMSicrfoyAIfukyRu3RYCKznVmIsJJeg9jzHLR8q48cbkM_NGV5asXVnHV58zc819UyNp8vo3H3LwL67T63uy8ny8Py9lYEwlPD4LfKoHNX7vS_m00c2c1psEbxjU7pE22hgTV6aPjXSCn3TW6Y0QTAR1SpGmPwMY4u4_5MqtJ0nJ-" charset="UTF-8"></script><style>
+    :root {
+      --bg: #ffffff;
+      --text: #1e293b;
+      --text-muted: #64748b;
+      --accent: #2563eb;
+      --accent-hover: #1d4ed8;
+      --card-bg: #f8fafc;
+      --border: #e2e8f0;
+      --tag-bg: #e0e7ff;
+      --tag-text: #3730a3;
+    }
+
+    [data-theme="dark"] {
+      --bg: #0f172a;
+      --text: #f8fafc;
+      --text-muted: #94a3b8;
+      --accent: #38bdf8;
+      --accent-hover: #7dd3fc;
+      --card-bg: #1e293b;
+      --border: #334155;
+      --tag-bg: #1e3a8a;
+      --tag-text: #bfdbfe;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      z-index: 100;
+    }
+
+    [data-theme="dark"] header {
+      background: rgba(15, 23, 42, 0.85);
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 0;
+    }
+
+    .logo {
+      font-family: 'Fira Code', monospace;
+      font-weight: 700;
+      font-size: 1.1rem;
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--accent);
+    }
+
+    .theme-toggle {
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.85rem;
+    }
+
+    .hero {
+      padding: 4rem 0 2rem;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+      letter-spacing: -0.02em;
+    }
+
+    .hero .subtitle {
+      font-size: 1.2rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      max-width: 700px;
+      margin-bottom: 1.5rem;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.5rem 1.2rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      background-color: var(--accent);
+      color: #ffffff;
+    }
+
+    [data-theme="dark"] .btn-primary {
+      color: #0f172a;
+    }
+
+    .btn-primary:hover {
+      opacity: 0.9;
+    }
+
+    .btn-outline {
+      border: 1px solid var(--border);
+      color: var(--text);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+    }
+
+    section {
+      padding: 3rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    section:last-of-type {
+      border-bottom: none;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 3px;
+      background: var(--accent);
+      margin-top: 0.3rem;
+      border-radius: 2px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 1.5rem;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: var(--accent);
+    }
+
+    .card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .tag {
+      background: var(--tag-bg);
+      color: var(--tag-text);
+      font-size: 0.75rem;
+      font-family: 'Fira Code', monospace;
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+    }
+
+    .skills-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .skills-group h4 {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+      color: var(--text-muted);
+    }
+
+    footer {
+      padding: 2rem 0;
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.85rem;
+      border-top: 1px solid var(--border);
+    }
+
+    @media (max-width: 640px) {
+      .hero h1 { font-size: 2rem; }
+      .nav-links { gap: 0.8rem; font-size: 0.85rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container">
+      <nav>
+        <a href="#" class="logo">np~ $</a>
+        <ul class="nav-links">
+          <li><a href="#about">Sobre mí</a></li>
+          <li><a href="#projects">Proyectos</a></li>
+          <li><a href="#skills">Habilidades</a></li>
+          <li><a href="#interests">Intereses</a></li>
+        </ul>
+        <button class="theme-toggle" id="themeToggle">🌙 Modo</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero" id="about">
+      <h1>Nayeli Preciado</h1>
+      <div class="subtitle">Estudiante de Ingeniería en Sistemas — Escuela Politécnica Nacional</div>
+      <p>
+        Enfocada en el desarrollo de software, arquitectura de redes, seguridad inalámbrica y análisis numérico. Apasionada por resolver problemas computacionales mediante código limpio y estructurado.
+      </p>
+      <div class="social-links">
+        <a href="https://github.com/nayeli-preciado" target="_blank" class="btn btn-primary">GitHub</a>
+        <a href="mailto:nayeli.preciado@epn.edu.ec" class="btn btn-outline">Contacto</a>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2 class="section-title">Proyectos Destacados</h2>
+      <div class="grid">
+        
+        <div class="card">
+          <h3>Enrutamiento OSPF & Seguridad 802.11</h3>
+          <p>Análisis y configuración de redes OSPFv2/OSPFv3 multi-área, junto con la evaluación de mecanismos de autenticación inalámbrica y defensa ante ataques Evil Twin.</p>
+          <div class="tags">
+            <span class="tag">OSPFv3</span>
+            <span class="tag">Wireless 802.11</span>
+            <span class="tag">Wireshark</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Métodos Numéricos en Python</h3>
+          <p>Implementación CLI de algoritmos para la resolución de ecuaciones no lineales (Bisección y Newton-Raphson) enfocados en eficiencia computacional.</p>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">biseccion.py</span>
+            <span class="tag">newton.py</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Búsqueda de Cadenas (KMP & Boyer-Moore)</h3>
+          <p>Estudio comparativo e implementación de algoritmos avanzados para búsqueda de patrones de texto en grandes volúmenes de datos.</p>
+          <div class="tags">
+            <span class="tag">Python</span>
+            <span class="tag">KMP</span>
+            <span class="tag">Boyer-Moore</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Gestión con Vistas en SQLite</h3>
+          <p>Diseño e implementación de vistas avanzadas en bases de datos relacionales para optimización de consultas complejas.</p>
+          <div class="tags">
+            <span class="tag">SQL</span>
+            <span class="tag">SQLite</span>
+            <span class="tag">Databases</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2 class="section-title">Habilidades Técnicas</h2>
+      
+      <div class="skills-group">
+        <h4>Lenguajes & Bases de Datos</h4>
+        <div class="tags">
+          <span class="tag">Python</span>
+          <span class="tag">C++</span>
+          <span class="tag">SQL / SQLite</span>
+          <span class="tag">HTML5 / CSS3</span>
+        </div>
+      </div>
+
+      <div class="skills-group">
+        <h4>Redes & Control de Versiones</h4>
+        <div class="tags">
+          <span class="tag">Git / GitHub</span>
+          <span class="tag">OSPFv2 / OSPFv3</span>
+          <span class="tag">Seguridad Wireless 802.11</span>
+          <span class="tag">Linux CLI</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="interests">
+      <h2 class="section-title">Deporte e Intereses</h2>
+      <div class="card">
+        <h3>Triatlón & Rey Run Caupicho</h3>
+        <p>
+          Triatleta activa. Cofundadora e integrante de la agrupación deportiva <strong>Rey Run Caupicho</strong>, combinando el alto rendimiento en natación, ciclismo y atletismo con la disciplina del trabajo en equipo.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© Nayeli Preciado — Escuela Politécnica Nacional | Publicado con GitHub Pages</p>
+    </div>
+  </footer>
+
+  <script>
+    const themeToggleBtn = document.getElementById('themeToggle');
+    const currentTheme = localStorage.getItem('theme') || 'light';
+
+    if (currentTheme === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      themeToggleBtn.textContent = '☀️ Modo';
+    }
+
+    themeToggleBtn.addEventListener('click', () => {
+      let theme = document.documentElement.getAttribute('data-theme');
+      if (theme === 'dark') {
+        document.documentElement.removeAttribute('data-theme');
+        localStorage.setItem('theme', 'light');
+        themeToggleBtn.textContent = '🌙 Modo';
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+        themeToggleBtn.textContent = '☀️ Modo';
+      }
+    });
+  </script>
+</body>
+</html>
